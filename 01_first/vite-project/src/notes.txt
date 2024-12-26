@@ -1,0 +1,2 @@
+what is react component?
+Ans:- React component is a funtion which returns react element.
