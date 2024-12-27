@@ -112,21 +112,37 @@
 //   )
 // }
 
-import JokesData from "./components/JokesData"
-import Jokes from "./components/Jokes"
+// import JokesData from "./components/JokesData"
+// import Jokes from "./components/Jokes"
+
+// export default function App(){
+// //  console.log(JokesData)  // it give array of jokesData
+
+//   const jokeElement = JokesData.map((joke) => {
+//     return <Jokes setup={joke.setup} punchline={joke.punchline}/>
+//   })
+
+//   console.log(jokeElement)
+
+//   return(
+//     <>
+//      {jokeElement}
+//     </>
+//   )
+// }
+
+
+import data from "./components/data"
+import Entry from "./components/Entry"
 
 export default function App(){
-//  console.log(JokesData)  // it give array of jokesData
-
-  const jokeElement = JokesData.map((joke) => {
-    return <Jokes setup={joke.setup} punchline={joke.punchline}/>
+  console.log(data)
+  const myData = data.map((d) => {
+    return <Entry key={d.id} img={d.img} title={d.title} country={d.country} googleMapLink={d.googleMapLink} date={d.date} text={d.text}/>
   })
-
-  console.log(jokeElement)
-
-  return(
-    <>
-     {jokeElement}
-    </>
-  )
-}
+    return(
+      <>
+    {myData}
+      </>
+    )
+  }
