@@ -150,19 +150,39 @@
 
   // passing object as props
 
-  import data from "./components/data"
-  import Entry from "./components/Entry"
-import Header from "./components/Header"
+//   import data from "./components/data"
+//   import Entry from "./components/Entry"
+// import Header from "./components/Header"
   
-  export default function App(){
-    // console.log(data)
-    const myData = data.map((entry) => {
-      return <Entry key={entry.id} entry={entry}/>
-    })
-      return(
-        <>
-        <Header/>
-      {myData}
-        </>
-      )
-    }
+//   export default function App(){
+//     // console.log(data)
+//     const myData = data.map((entry) => {
+//       return <Entry key={entry.id} entry={entry}/>
+//     })
+//       return(
+//         <>
+//         <Header/>
+//       {myData}
+//         </>
+//       )
+//     }
+
+
+// passing data as spread operator
+
+import data from "./components/data"
+import Entry from "./components/Entry"
+import Header from "./components/Header"
+
+export default function App(){
+  // console.log(data)
+  const myData = data.map((entry) => {
+    return <Entry key={entry.id} {...entry}/>
+  })
+    return(
+      <>
+      <Header/>
+    {myData}
+      </>
+    )
+  }
