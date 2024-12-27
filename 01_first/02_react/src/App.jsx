@@ -98,15 +98,35 @@
 // }
 
 
+// export default function App(){
+//   const cities = [
+//     <h2>patna</h2>,
+//     <h2>assam</h2>,
+//     <h2>goa</h2>,
+//     <h2>dipur</h2>
+//   ]
+//   return(
+//     <>
+//       {cities}
+//     </>
+//   )
+// }
+
+import JokesData from "./components/JokesData"
+import Jokes from "./components/Jokes"
+
 export default function App(){
-  const cities = [
-    <h2>patna</h2>,
-    <h2>assam</h2>,
-    <h2>goa</h2>
-  ]
+//  console.log(JokesData)  // it give array of jokesData
+
+  const jokeElement = JokesData.map((joke) => {
+    return <Jokes setup={joke.setup} punchline={joke.punchline}/>
+  })
+
+  console.log(jokeElement)
+
   return(
     <>
-      {cities}
+     {jokeElement}
     </>
   )
 }
