@@ -55,20 +55,58 @@
 //   );
 // }
 
-import Jokes from "./components/Jokes";
+// import Jokes from "./components/Jokes";
 
-export default function App() {
-  return (
+// export default function App() {
+//   return (
+//     <>
+//       <Jokes joke="Why don't scientists trust atoms? Because they make up everything!" info="info is valid" name="aziz" upvotes={10} isPun={true}
+//         comments={[
+//           {name: "john", age: 20},
+//           {name: "miya", age: 20}
+//         ]}
+//       />
+//       <Jokes joke="Why did the scarecrow win an award? Because he was outstanding in his field!" isPun={false}/>
+//       <Jokes joke="Why don’t skeletons fight each other? They don’t have the guts." isPun={true}/>
+//       <Jokes joke="What do you call fake spaghetti? An impasta!" isPun={false}/>
+//     </>
+//   );
+// }
+
+
+// export default function App(){
+//   // React can render arrays
+//   const cities = ["patna ", "chennai ", "kashmir ", "kerla "]
+
+//   // Note:- object are not valid as react child
+//   // const person = [{name: "aziz"}]
+//   // react can not render objects
+
+//   const jsx = <h1>Taufique</h1> 
+//   console.log(jsx); // it returns object
+//   // jsx return object and it can render
+//   // react can render object which is created with jsx syntex
+
+//   return(
+//     <main>
+//       {/* {["patna ", "chennai ", "kashmir ", "kerla "]} */}
+//         {cities}
+//         {/* {person} */}
+//         {jsx}
+//     </main>
+//   )
+// }
+
+
+export default function App(){
+  const cities = [
+    <h2>patna</h2>,
+    <h2>assam</h2>,
+    <h2>goa</h2>
+  ]
+  return(
     <>
-      <Jokes joke="Why don't scientists trust atoms? Because they make up everything!" info="info is valid" name="aziz" upvotes={10} isPun={true}
-        comments={[
-          {name: "john", age: 20},
-          {name: "miya", age: 20}
-        ]}
-      />
-      <Jokes joke="Why did the scarecrow win an award? Because he was outstanding in his field!" isPun={false}/>
-      <Jokes joke="Why don’t skeletons fight each other? They don’t have the guts." isPun={true}/>
-      <Jokes joke="What do you call fake spaghetti? An impasta!" isPun={false}/>
+      {cities}
     </>
-  );
+  )
 }
