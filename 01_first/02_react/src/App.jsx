@@ -132,17 +132,37 @@
 // }
 
 
-import data from "./components/data"
-import Entry from "./components/Entry"
+// import data from "./components/data"
+// import Entry from "./components/Entry"
 
-export default function App(){
-  console.log(data)
-  const myData = data.map((d) => {
-    return <Entry key={d.id} img={d.img} title={d.title} country={d.country} googleMapLink={d.googleMapLink} date={d.date} text={d.text}/>
-  })
-    return(
-      <>
-    {myData}
-      </>
-    )
-  }
+// export default function App(){
+//   console.log(data)
+//   const myData = data.map((d) => {
+//     return <Entry key={d.id} img={d.img} title={d.title} country={d.country} googleMapLink={d.googleMapLink} date={d.date} text={d.text}/>
+//   })
+//     return(
+//       <>
+//     {myData}
+//       </>
+//     )
+//   }
+
+
+  // passing object as props
+
+  import data from "./components/data"
+  import Entry from "./components/Entry"
+import Header from "./components/Header"
+  
+  export default function App(){
+    // console.log(data)
+    const myData = data.map((entry) => {
+      return <Entry key={entry.id} entry={entry}/>
+    })
+      return(
+        <>
+        <Header/>
+      {myData}
+        </>
+      )
+    }
