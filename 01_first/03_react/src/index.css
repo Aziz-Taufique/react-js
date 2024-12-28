@@ -65,3 +65,14 @@ main {
     content: "+";
     margin-right: 5px;
 }
+
+.aziz-main{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    text-align: center;
+}
+
+.aziz-main > button{
+    border-radius: 100%;
+}
