@@ -1,0 +1,1 @@
+export default "https://imgs.search.brave.com/KHSDO_HNmqxSPnGUALv88ACMw8ioDzPNgCpBE3ffK5E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA5LzQ4LzExLzc5/LzM2MF9GXzk0ODEx/NzkzN190VzJpTXhq/bVJHOHR4NFpPZm1V/M29qUlF4OFZRS0hz/dC5qcGc"
